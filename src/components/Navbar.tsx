@@ -20,7 +20,7 @@ const Navbar = () => {
 					</h1>
 				</aside>
 
-				<div className={`links absolute md:static w-[90%] md:w-fit top-[5rem] ${isOpen ? "block" : "hidden"}`}>
+				<div className={`links absolute md:static w-[90%] md:w-fit top-[5rem] ${isOpen ? "block" : "hidden md:block"}`}>
 					<ul className="flex md:space-x-6 w-full md:w-fit space-y-4 md:space-y-0 top-[2rem] justify-center items-center flex-col md:flex-row">
 						{menuLinks.map((l) => {
 							return (
