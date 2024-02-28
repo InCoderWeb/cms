@@ -47,3 +47,15 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+.latestPost{
+	@apply border relative rounded-2xl bg-primary/50 overflow-hidden before:content-[""] before:h-full before:w-full before:absolute before:block before:bg-gradient-to-b before:from-transparent before:to-black/80 before:bg-transparent transition-all before:z-[999] size-auto
+}
+
+.latestPost img{
+	@apply object-cover z-[99] transition-all duration-1000
+}
+
+.latestPost:hover img{
+	@apply scale-110
+}
