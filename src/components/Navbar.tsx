@@ -32,7 +32,7 @@ const Navbar = () => {
 				</aside>
 
 				<div
-					className={`links absolute md:static w-[90%] md:w-fit top-[5rem] ${
+					className={`links absolute md:static w-[90%] z-[999999] bg-primary-foreground/80 py-4 rounded-lg md:w-fit top-[5rem] ${
 						isOpen ? "block" : "hidden md:block"
 					}`}
 				>
