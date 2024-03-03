@@ -48,6 +48,11 @@
 	}
 }
 
+body {
+	min-height: 100vh;
+	@apply relative;
+}
+
 .latestPost {
 	@apply border relative rounded-2xl bg-primary/50 overflow-hidden before:content-[""] before:h-full before:w-full before:absolute before:block before:bg-gradient-to-b before:from-transparent before:to-black/80 before:bg-transparent transition-all before:z-[999] size-auto;
 }
@@ -66,4 +71,60 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+.sidebarWidget {
+	@apply border-[3px] rounded-xl transition-all hover:border-primary/50 text-white/80 p-3;
+}
+
+.socialLink {
+	@apply bg-emerald-800 flex items-center p-3 rounded-md text-base cursor-pointer transition-all overflow-clip;
+}
+
+.socialLink svg {
+	@apply mr-1 !size-6;
+}
+
+.fb {
+	@apply !bg-[#1877f2]/60 hover:!bg-[#1877f2];
+}
+
+.insta {
+	background: linear-gradient(15deg, #ffb13d, #dd277b, #4d5ed4) !important;
+	opacity: 0.9;
+	@apply hover:!opacity-100;
+}
+
+.yt {
+	@apply !bg-red-800 hover:!bg-[#ff0000]/80;
+}
+
+.dev {
+	@apply !bg-[#0a0a0a]/80 hover:!bg-[#0a0a0a] border border-white/10;
+}
+
+.github {
+	@apply !bg-[#333]/80 hover:!bg-[#333];
+}
+
+.wa {
+	@apply !bg-[#075e54]/80 hover:!bg-[#075e54];
+}
+
+.inlinePost {
+	@apply flex items-center;
+}
+
+.WidgetHeader {
+	@apply pb-3 border-b mb-6;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.socialAuthBtn{
+	@apply bg-transparent !border-0 text-gray-300 text-base border h-[3rem]
 }

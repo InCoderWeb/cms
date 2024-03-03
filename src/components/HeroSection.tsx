@@ -1,5 +1,5 @@
 "use client"
-import { postData } from '@/lib/Constants'
+import { latestPostData } from '@/lib/Constants'
 import React from 'react'
 import { GoDotFill } from "react-icons/go";
 
@@ -9,7 +9,7 @@ const HeroSection = () => {
         <section className="latestPosts container my-6">
             <div className="w-full grid md:h-[40rem] gap-4 md:grid-cols-4 grid-rows-4">
                 {
-                    postData.map((d, i) => {
+                    latestPostData.map((d, i) => {
                         return <>
                             <div className={`latestPost ${i == 0 ? "md:col-span-2 md:row-span-4" : i == 1 ? "md:col-span-2 md:row-span-2" : "md:col-span-1 md:row-span-2" }`}>
                                 <img src={d.thumb} alt={d.title} className='h-full w-full' />

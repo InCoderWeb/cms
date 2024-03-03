@@ -10,7 +10,7 @@ const BackToTop = () => {
 	if (scroll.y >= 500) {
 		return (
 			<Button
-				className="fixed bottom-8 right-8 size-12 text-xl bg-primary/50 text-white"
+				className="fixed bottom-[2.8rem] right-8 size-12 text-xl bg-primary/50 text-white"
 				onClick={() => scrollTo({ y: 0 })}
 				title="Back to top"
 			>

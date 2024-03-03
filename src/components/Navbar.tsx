@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +22,16 @@ const Navbar = () => {
 		<>
 			<section className="container flex justify-between relative items-center w-[98%] h-[4rem] my-2">
 				<aside className="flex justify-center items-center text-white hover:text-primary transition-color cursor-pointer">
-					<img
-						src="./images/logo.png"
-						alt="Logo"
-						className="size-10 mr-2"
-					/>
-					<h1 className="text-2xl font-sans font-medium transition duration-300 ease-in-out">
-						InCoder
-					</h1>
+					<Link href={"/"} className="flex items-center">
+						<img
+							src="/images/logo.png"
+							alt="Logo"
+							className="size-10 mr-2"
+						/>
+						<h1 className="text-2xl font-sans font-medium transition duration-300 ease-in-out">
+							InCoder
+						</h1>
+					</Link>
 				</aside>
 
 				<div
@@ -39,13 +42,13 @@ const Navbar = () => {
 					<ul className="flex md:space-x-6 w-full md:w-fit space-y-4 md:space-y-0 top-[2rem] justify-center items-center flex-col md:flex-row">
 						{menuLinks.map((l) => {
 							return (
-								<a
+								<Link
 									href={l.url}
 									key={l.text}
 									className="inLink text-white/70 hover:text-white transition-colors"
 								>
 									<li>{l.text}</li>
-								</a>
+								</Link>
 							);
 						})}
 					</ul>
@@ -75,7 +78,11 @@ const Navbar = () => {
 								</Button>
 							</div>
 
-							<img src="./images/search_img.svg" className="w-[20rem] mx-auto mt-4" alt="Search Blog Here"/>
+							<img
+								src="/images/search_img.svg"
+								className="w-[20rem] mx-auto mt-4"
+								alt="Search Blog Here"
+							/>
 						</DialogContent>
 					</Dialog>
 

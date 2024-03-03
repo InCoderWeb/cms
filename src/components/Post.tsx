@@ -7,7 +7,23 @@ const Post = ({
 	date = "",
 	desc = "",
 	postImg = "",
+	type = "",
 }) => {
+
+	if(type == "inline"){
+		return (
+			<>
+				<div className="inlinePost">
+					<img src={postImg} alt={title} className="min-h-[4rem] min-w-[6rem] mr-2 h-[4rem] w-[6rem] object-cover rounded-md" />
+					<div className="postDataWrapper">
+						<a className="title text-sm text-white/80 truncateDesc">{title}</a>
+						<p className="date text-xs text-white/50 mt-1">on {date}</p>
+					</div>
+				</div>
+			</>
+		)
+	}
+
 	return (
 		<>
 			<div className="post border-[2px] text-white border-primary/40 transition-all scale-[.97] hover:scale-[1] hover:border-primary/80 w-full rounded-3xl p-3 overflow-hidden">

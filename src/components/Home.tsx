@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
 import PostSection from './PostSection'
+import Footer from './Footer'
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
         <Navbar/>
         <HeroSection/>
         <PostSection/>
+        <Footer/>
     </>
   )
 }
