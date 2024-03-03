@@ -9,7 +9,7 @@ const HomePage = () => {
     <>
         <Navbar/>
         <HeroSection/>
-        <PostSection/>
+        <PostSection title="Read More" />
         <Footer/>
     </>
   )
